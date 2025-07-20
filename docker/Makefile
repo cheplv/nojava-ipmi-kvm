@@ -17,7 +17,7 @@ build-openjdk:
 build-oracle:
 	@if [ -f "data/jre-7u80-linux-x64.tar.gz" ]; then \
 	    docker build -t "sciapp/nojava-ipmi-kvm:latest-oraclejre-7" -f "Dockerfile_oraclejre-7" .; \
-	    if [ "$$(git symbolic-ref -q HEAD)" = "refs/heads/main" ]; then \
+	    if [ "$$(git symbolic-ref -q HEAD)" = "refs/heads/master" ]; then \
 	        docker tag "sciapp/nojava-ipmi-kvm:latest-oraclejre-7" \
 	                   "sciapp/nojava-ipmi-kvm:v$(PACKAGE_VERSION)-oraclejre-7"; \
 	    fi; \
