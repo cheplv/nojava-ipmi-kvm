@@ -23,7 +23,7 @@ RUN apt-get install -y --no-install-recommends ca-certificates curl eterm fluxbo
     # Add support for asian characters
     apt-get install -y --no-install-recommends fonts-arphic-ukai fonts-arphic-uming fonts-ipafont-mincho \
                                                fonts-ipafont-gothic fonts-unfonts-core && \
-    pip install future requests 'websockify<0.10' && \
+    pip install future requests requests_file 'websockify<0.10' && \
     rm -rf /var/lib/apt/lists/*
 
 RUN for java_version in "7u51" "7u79" "7u181"; do \

@@ -13,7 +13,7 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends ca-certificates curl net-tools procps python-numpy \
                                                python-pip python-pyquery python-setuptools python-wheel tar && \
     rm -rf /var/lib/apt/lists/* && \
-    pip install future requests && \
+    pip install future requests requests_file && \
     mkdir /usr/local/kvm-html5/
 
 COPY kvm-html5/package*.json /usr/local/kvm-html5/
